@@ -1,0 +1,1 @@
+ROM + Coprocessor (OBC1) + RAM + Battery

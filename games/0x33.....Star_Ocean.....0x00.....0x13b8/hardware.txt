@@ -1,0 +1,1 @@
+ROM + Coprocessor (S-DD1) + RAM + Battery

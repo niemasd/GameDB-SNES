@@ -1,0 +1,1 @@
+b'JELLYBOY        \\\x00\xd0\n '
