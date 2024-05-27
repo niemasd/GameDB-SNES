@@ -28,5 +28,7 @@ DEVELOPER_ID.....INTERNAL_TITLE.....ROM_VERSION.....CHECKSUM
 * Special characters in the internal title are replaced with `_`
 * Internal titles that are not human-readable strings are represented as a hex string starting with `0x`
 
+See the [GameID SNES identification code](https://github.com/niemasd/GameID/blob/d038079574c2679de8f437101bcea056b9114646/GameID.py#L384-L474) for implementation details.
+
 # Sources
 * [GameID](https://github.com/niemasd/GameID)
