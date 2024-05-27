@@ -9,13 +9,24 @@ Super Nintendo Entertainment System (SNES), part of [GameDB](https://github.com/
 
 # Notes
 
-* SNES games don't have unique internal game IDs or serial numbers, so the game folders within [`games`](games) are named with a unique ID as follows:
-    * The first field is the **developer ID**
-    * The second field is the **internal title**, but with special characters replaced with `_`
-        * Some games have internal titles that are not human-readable strings, so for those, I represent the internal title as a hex string starting with `0x`
-    * The third field is the **ROM version**
-    * The fourth field is the **checksum**
-    * The fields are delimited using `.....` (i.e., 5 space characters)
+## Uniquely Identifying Games
+
+SNES games don't have unique internal game IDs or serial numbers. The following 4 fields can be used to uniquely identify a game:
+
+1. The **Internal Title**, which is at offsets `0x00` through `0x19` (inclusive) of the [ROM header](https://snes.nesdev.org/wiki/ROM_header#Cartridge_header)
+2. The **Developer ID**, which is at offset `0x1A` of the [ROM header](https://snes.nesdev.org/wiki/ROM_header#Cartridge_header)
+3. The **ROM Version**, which is at offset `0x1B` of the [ROM header](https://snes.nesdev.org/wiki/ROM_header#Cartridge_header)
+4. The **Checksum** (see [calculation code](https://github.com/niemasd/GameID/blob/d038079574c2679de8f437101bcea056b9114646/GameID.py#L391-L411))
+
+The game folders within [`games`](games) are named as follows (i.e., these 4 fields delimited by `.....`):
+
+```
+DEVELOPER_ID.....INTERNAL_TITLE.....ROM_VERSION.....CHECKSUM
+```
+
+* Whitespace in the internal title is stripped
+* Special characters in the internal title are replaced with `_`
+* Internal titles that are not human-readable strings are represented as a hex string starting with `0x`
 
 # Sources
 * [GameID](https://github.com/niemasd/GameID)
