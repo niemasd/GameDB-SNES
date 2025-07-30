@@ -1,1 +1,1 @@
-Alfred Chicken (Beta)
+Alfred Chicken

@@ -1,1 +1,1 @@
-Striker (Europe) (En,Fr,De,Es,It,Nl,Sv)
+Striker (Europe) (En,Fr,De,Es,It,Nl,Sv).sfc

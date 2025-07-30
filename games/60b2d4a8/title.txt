@@ -1,1 +1,1 @@
-Striker
+Striker (En,Fr,De,Es,It,Nl,Sv)
